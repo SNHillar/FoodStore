@@ -74,6 +74,7 @@ El proyecto requiere **dos terminales**: una para el backend y otra para el fron
 
 ```bash
 cd backend
+chmod +x gradlew
 ./gradlew bootRun
 ```
 
