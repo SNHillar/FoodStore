@@ -1,0 +1,29 @@
+{
+  "name": "proteger_rutas",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^24.7.1",
+    "typescript": "~5.8.3",
+    "vite": "^7.3.1"
+  },
+  "description": "Este es un proyecto de demostración creado con fines educativos para ilustrar un mecanismo básico de protección de rutas en el lado del cliente (frontend) utilizando **Vite** y **TypeScript**.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chiro45/proteger_rutas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chiro45/proteger_rutas/issues"
+  },
+  "homepage": "https://github.com/chiro45/proteger_rutas#readme"
+}

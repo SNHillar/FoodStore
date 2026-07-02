@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador Categorias</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <header class="store-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-pizza">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path
+                            d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983" />
+                        <path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479" />
+                        <path d="M13 11.01v-.01" />
+                        <path d="M11 14v-.01" />
+                    </svg></span>
+                <h1 class="logo__text">Food<span class="logo__span">Store</span></h1>
+            </div>
+
+            <nav class="nav">
+                <a href="../../store/home/home.html" class="nav__link">
+                    <i class="nav-link__icon"></i> Catálogo
+                </a>
+                <a href="../../store/cart/cart.html" class="nav__link">
+                    <i class="nav-link__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                            <path d="M17 17h-11v-14h-2" />
+                            <path d="M6 5l14 1l-1 7h-13" />
+                        </svg></i>
+                    <span id="cart-count" class="nav-link__span">0</span>
+                </a>
+                <button id="logout-btn" class="nav__btn" href="/src/pages/auth/login/login.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                        class="icon icon-tabler icons-tabler-outline icon-tabler-logout">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                        <path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" />
+                        <path d="M9 12h12l-3 -3" />
+                        <path d="M18 15l3 -3" />
+                    </svg>Salir
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <div class="admin-layout">
+
+        <aside class="admin-sidebar">
+
+            <nav class="admin-nav">
+                <a href="../home/admin-home.html" class="admin-nav__link">
+                    <span class="admin-nav__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-chart-histogram">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 3v18h18" />
+                            <path d="M20 18v3" />
+                            <path d="M16 16v5" />
+                            <path d="M12 13v8" />
+                            <path d="M8 16v5" />
+                            <path d="M3 11c6 0 5 -5 9 -5s3 5 9 5" />
+                        </svg></span> Dashboard
+                </a>
+                <a href="../categories/admin-categories.html" class="admin-nav__link admin-nav__link--active">
+                    <span class="admin-nav__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-category">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M4 4h6v6h-6l0 -6" />
+                            <path d="M14 4h6v6h-6l0 -6" />
+                            <path d="M4 14h6v6h-6l0 -6" />
+                            <path d="M14 17a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                        </svg></span> Categorías
+                </a>
+                <a href="../products/admin-products.html" class="admin-nav__link">
+                    <span class="admin-nav__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-building-store">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M3 21l18 0" />
+                            <path
+                                d="M3 7v1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1m0 1a3 3 0 0 0 6 0v-1h-18l2 -4h14l2 4" />
+                            <path d="M5 21l0 -10.15" />
+                            <path d="M19 21l0 -10.15" />
+                            <path d="M9 21v-4a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v4" />
+                        </svg></span> Productos
+                </a>
+                <a href="../orders/admin-orders.html" class="admin-nav__link">
+                    <span class="admin-nav__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round"
+                            class="icon icon-tabler icons-tabler-outline icon-tabler-box">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                            <path d="M12 3l8 4.5l0 9l-8 4.5l-8 -4.5l0 -9l8 -4.5" />
+                            <path d="M12 12l8 -4.5" />
+                            <path d="M12 12l0 9" />
+                            <path d="M12 12l-8 -4.5" />
+                        </svg></span> Pedidos
+                </a>
+
+                <div class="admin-nav__divider"></div>
+
+                <a href="../../store/home/home.html" class="admin-nav__link admin-nav__link--logout">
+                    <span class="admin-nav__icon">←</span> Ver Tienda
+                </a>
+            </nav>
+        </aside>
+
+        <main class="admin-content">
+
+            <section class="admin-toolbar">
+                <div class="admin-toolbar__title-group">
+                    <h2 class="admin-content__title">Gestión de Categorías</h2>
+                </div>
+
+                <div class="admin-toolbar__actions">
+                    <button id="create-btn" class="admin-btn-add">+ Nueva Categoría</button>
+                </div>
+            </section>
+
+            <section id="categories-list" class="admin-cards-flex">
+                
+            </section>
+        </main>
+    </div>
+    <div id="categoryModal" class="modal-overlay">
+        <div class="modal-card">
+            <button id="closeModalBtn" class="modal-card__close-btn">×</button>
+            
+            <h3 class="modal-card__title">Nueva Categoría</h3>
+            
+            <form id="categoryForm" class="modal-form">
+                <div class="modal-form__group">
+                    <label for="categoryName" class="modal-form__label">Nombre</label>
+                    <input type="text" id="categoryName" class="modal-form__input" placeholder="Ej. Promociones" required>
+                </div>
+                
+                <div class="modal-form__group">
+                    <label for="categoryDescription" class="modal-form__label">Descripción</label>
+                    <textarea id="categoryDescription" class="modal-form__textarea" placeholder="Descripción de la categoría..." rows="3" required></textarea>
+                </div>
+                
+                <button type="submit" class="modal-form__btn-submit">Guardar</button>
+            </form>
+        </div>
+    </div>
+    <div id="deleteCategoryModal" class="modal-overlay">
+        <div class="delete-modal__content">
+            <button id="closeDeleteModalBtn" class="delete-modal__btn--close">×</button>
+            <h3 class="modal-card__title">Eliminar Categoría</h3>
+            <p class="modal-card__description">¿Estás seguro de querer eliminar esta categoría?</p>
+            <button id="confirmDeleteCategoryBtn" class="delete-modal__btn">Confirmar</button>
+        </div>
+    </div>
+    <div id="toast" class="toast">
+        <div id="toast-icon" class="toast__icon"></div>
+        <p id="toast-message" class="toast__message">Mensaje de prueba</p>
+    </div>
+    <script type="module" src="adminCategories.ts"></script>
+</body>
+
+</html>

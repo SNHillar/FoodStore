@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador Pedidos</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="store-header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-pizza"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M12 21.5c-3.04 0 -5.952 -.714 -8.5 -1.983l8.5 -16.517l8.5 16.517a19.09 19.09 0 0 1 -8.5 1.983" /><path d="M5.38 15.866a14.94 14.94 0 0 0 6.815 1.634a14.944 14.944 0 0 0 6.502 -1.479" /><path d="M13 11.01v-.01" /><path d="M11 14v-.01" /></svg></span>
+                <h1 class="logo__text">Food<span class="logo__span">Store</span></h1>
+            </div>
+
+            <nav class="nav">
+                <a href="../../store/home/home.html" class="nav__link">
+                    <i class="nav-link__icon"></i> Catálogo
+                </a>
+                <a href="../../store/cart/cart.html" class="nav__link">
+                    <i class="nav-link__icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M4 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M15 19a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg></i>
+                    <span id="cart-count" class="nav-link__span">0</span>
+                </a>
+                <button id="logout-btn" class="nav__btn" href="/src/pages/auth/login/login.html">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-logout"><path stroke="none" d="M0 0h24v24H0z" fill="none" /><path d="M14 8v-2a2 2 0 0 0 -2 -2h-7a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h7a2 2 0 0 0 2 -2v-2" /><path d="M9 12h12l-3 -3" /><path d="M18 15l3 -3" /></svg>Salir
+                </button>
+            </nav>
+        </div>
+    </header>
+    <div class="client-layout">
+        
+        <main class="client-content">
+            <section class="client-toolbar">
+                <div class="client-toolbar__title-group">
+                    <h2 class="client-content__title">Mis Pedidos</h2>
+                </div>
+            </section>
+
+            <section id="orders-list" class="client-cards-flex">
+                <!-- Aquí se renderizarán los pedidos -->
+            </section>
+        </main>
+    </div>
+    <div id="toast" class="toast">
+        <div id="toast-icon" class="toast__icon"></div>
+        <p id="toast-message" class="toast__message">Mensaje de prueba</p>
+    </div>
+    <script type="module" src="./clientOrders.ts"></script>
+</body>
+</html>

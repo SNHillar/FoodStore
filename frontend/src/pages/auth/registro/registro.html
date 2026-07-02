@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro FoodStore</title>
+    <link rel="stylesheet" href="/src/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="auth-card">
+        <div class="logo">
+            <span class="logo__icon">🍕</span>
+            <h1 class="logo__text logo__text--auth">Food<span class="logo__span">Store</span></h1>
+        </div>
+
+        <h1 class="auth-card__text">Registro</h1>
+        <form id="form" class="form">
+            <div class="form-group">
+                <label class="form-group__label" for="name">Nombre</label>
+                <input class="form-group__input" type="text" id="name" name="name" autocomplete="off"
+                    placeholder="Name">
+            </div>
+            <div class="form-group">
+                <label class="form-group__label" for="lastName">Apellido</label>
+                <input class="form-group__input" type="text" id="lastName" name="lastName" autocomplete="off"
+                    placeholder="Lastname">
+            </div>
+            <div class="form-group">
+                <label class="form-group__label" for="phone">Telefono</label>
+                <input class="form-group__input" type="text" id="phone" name="phone" autocomplete="off"
+                    placeholder="Phone Number">
+            </div>
+
+            <div class="form-group">
+                <label class="form-group__label" for="email">Email</label>
+                <input class="form-group__input" type="email" id="email" name="email" autocomplete="off"
+                    placeholder="example@example.com">
+            </div>
+            <div class="form-group">
+                <label class="form-group__label" for="password">Password</label>
+                <input class="form-group__input" type="password" id="password" name="password" autocomplete="off"
+                    placeholder="********">
+            </div>
+            <p id="error-message" class="form__error"></p>
+            <button type="submit" class="form__btn form__btn--submit">Registrar</button>
+        </form>
+    </main>
+    <script type="module" src="./registro.ts"></script>
+</body>
+
+</html>
