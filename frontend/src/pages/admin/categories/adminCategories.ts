@@ -2,7 +2,7 @@ import type { ICategory } from "../../../types/category";
 import { CategoriaService } from "../../../services/categoryService";
 import { ACTIONS_ICONS, TOAST_ICONS } from "../../../utils/icons";
 import { showToast } from "../../../utils/toast";
-import type { Product } from "../../../types/product";
+
 
 const addBtn = document.getElementById('create-btn') as HTMLButtonElement;
 const categoriesList = document.getElementById('categories-list') as HTMLDivElement;
@@ -61,6 +61,13 @@ function renderCategories(categories: ICategory[]) {
         deleteBtn.classList.add('btn-icon-action', 'btn-icon-action--delete');
         deleteBtn.dataset.id = `${category.id}`;
         deleteBtn.innerHTML = `${ACTIONS_ICONS['Delete']}<span>Eliminar</span>`;
+
+        if (category.deleted) {
+            categoryElement.classList.add('management-card--deleted');
+            editBtn.disabled = true;
+            deleteBtn.disabled = true;
+            deleteBtn.textContent = "Ya eliminado.";
+        }
 
         actionsBtns.append(editBtn, deleteBtn);
         cardContent.append(categoryTitle, categoryDescription, actionsBtns);
@@ -128,6 +135,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 deleteCategoryModal.classList.add('modal-overlay--show');
                 confirmDeleteCategoryBtn.addEventListener('click', async () => {
                     await CategoriaService.delete(id);
+                    
                     showToast('Categoría eliminada con éxito.', 'success');
                     const updateCategories = await CategoriaService.getAll();
                     renderCategories(updateCategories);
