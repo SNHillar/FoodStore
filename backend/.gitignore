@@ -1,9 +1,21 @@
 HELP.md
-.gradle
+.gradle/
 build/
+out/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
+
+# Base de datos H2 (archivos locales si se usa jdbc:h2:file:...)
+*.mv.db
+*.trace.db
+data/
+
+# Configuración local (no commitear secretos ni overrides personales)
+application-local.properties
+application-*.local.properties
+.env
+.env.*
 
 ### STS ###
 .apt_generated

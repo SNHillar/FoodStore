@@ -1,0 +1,37 @@
+# --- Sistema operativo ---
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# --- Editores e IDEs ---
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+!.vscode/extensions.json
+*.swp
+*.swo
+*~
+
+# --- Variables de entorno y secretos ---
+.env
+.env.*
+!.env.example
+
+# --- Logs ---
+*.log
+logs/
+
+# --- Cursor / herramientas locales ---
+.cursor/
+
+# --- Documentos temporales / exportaciones ---
+*.tmp
+~$*
+*.bak
+
+# --- PDFs generados localmente (el borrador .md en docs/ sí se versiona) ---
+docs/*.pdf
+docs/**/*.pdf
